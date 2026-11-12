@@ -1,0 +1,17 @@
+{
+  "global_bm25_weight": 0.1,
+  "buckets": [
+    {
+      "max_words": 10,
+      "bm25_weight": 0.2
+    },
+    {
+      "max_words": 14,
+      "bm25_weight": 0.2
+    },
+    {
+      "max_words": 999,
+      "bm25_weight": 0.1
+    }
+  ]
+}
