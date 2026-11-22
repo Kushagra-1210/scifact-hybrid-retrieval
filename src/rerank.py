@@ -28,7 +28,7 @@ if __name__ == "__main__":
     texts = {d: doc_text(corpus[d]) for d in corpus}
     ce = CrossEncoder(MODEL)
     cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
-    for name in ["bm25"]:
+    for name in ["bm25", "hybrid", "tuned", "adaptive"]:
         run = load_run(f"results/runs/{name}.json")
         save_run(rerank_run(run, queries, texts, ce, cache), f"results/runs/{name}_rerank.json")
         json.dump(cache, open(CACHE, "w"))
